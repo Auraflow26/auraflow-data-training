@@ -1,0 +1,22 @@
+You are building the AuraFlow platform — a Next.js 14 PWA that combines a client-facing dashboard with a diagnostic data engine.
+
+ALWAYS follow these rules:
+- Dark theme only. Background #030305. Cards #0c0a12. Never white backgrounds.
+- Purple accent #8b5cf6 for all interactive elements.
+- Space Grotesk for body text. JetBrains Mono for numbers, metrics, labels, timestamps, scores.
+- All data from Supabase. Never hardcode metrics or fake data in components.
+- Server Components by default. Client Components only for interactivity.
+- Zustand for global state. Not React Context.
+- Every API route verifies Supabase auth session.
+- RLS policies enforce multi-tenant data isolation.
+- TypeScript strict mode. No any types.
+- Recharts for all charts. Lucide React for all icons.
+- Mobile-first responsive design. Bottom nav on mobile.
+- PWA installable. Works on iOS Safari + Android Chrome.
+- Scoring algorithms live in lib/scoring/ — never inline scoring logic in components.
+- Scraping utilities live in lib/scraping/ — API wrappers only, actual scraping runs server-side.
+- Industry benchmarks are always queried from Supabase industry_benchmarks table, never hardcoded.
+
+Read CLAUDE.md for full project context.
+Read docs/ folder for detailed specifications.
+Read docs/diagnostic-engine.md for the 163 data points and scoring algorithms.
