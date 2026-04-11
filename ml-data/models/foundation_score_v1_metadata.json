@@ -169,11 +169,11 @@
   ],
   "best_params": {
     "learning_rate": 0.1,
-    "max_depth": 4,
-    "min_child_weight": 10,
+    "max_depth": 3,
+    "min_child_weight": 5,
     "n_estimators": 300,
-    "reg_alpha": 1.0,
-    "reg_lambda": 10.0
+    "reg_alpha": 0.5,
+    "reg_lambda": 3.0
   },
   "fixed_params": {
     "objective": "reg:squarederror",
@@ -182,22 +182,22 @@
     "random_state": 42
   },
   "cv_summary": {
-    "best_cv_mae": 1.7211,
-    "best_cv_std": 0.306,
+    "best_cv_mae": 0.7355,
+    "best_cv_std": 0.0995,
     "n_combinations": 324,
     "n_folds": 15,
-    "tuning_seconds": 42.6
+    "tuning_seconds": 66.7
   },
   "test_metrics": {
-    "mae": 1.2818,
-    "rmse": 2.0508,
-    "r2": 0.9805,
-    "max_absolute_error": 5.6143,
-    "tier_accuracy": 0.9565,
-    "tier_correct": 22,
-    "tier_total": 23,
-    "residual_mean": 0.1294,
-    "residual_std": 2.0468,
+    "mae": 0.6201,
+    "rmse": 0.8502,
+    "r2": 0.9941,
+    "max_absolute_error": 2.4528,
+    "tier_accuracy": 0.9381,
+    "tier_correct": 106,
+    "tier_total": 113,
+    "residual_mean": -0.0121,
+    "residual_std": 0.8502,
     "out_of_bounds_predictions": 0
   },
   "label_encoders": {
@@ -336,102 +336,102 @@
   "top_features": [
     {
       "feature": "f_can_handle_2x_volume",
-      "gain": 2915.2339,
+      "gain": 24327.4141,
       "is_critical": false
     },
     {
-      "feature": "f_profit_margin_range",
-      "gain": 2248.2244,
+      "feature": "f_phone_system_type",
+      "gain": 17209.9492,
       "is_critical": false
     },
     {
       "feature": "f_scheduling_dispatch_system",
-      "gain": 2178.1619,
+      "gain": 8562.0,
       "is_critical": false
     },
     {
-      "feature": "f_monthly_lead_volume",
-      "gain": 544.5541,
+      "feature": "f_profit_margin_range",
+      "gain": 5559.5972,
+      "is_critical": false
+    },
+    {
+      "feature": "f_internal_communication_tool",
+      "gain": 807.3179,
+      "is_critical": false
+    },
+    {
+      "feature": "f_attribution_model",
+      "gain": 594.1656,
+      "is_critical": false
+    },
+    {
+      "feature": "f_lead_response_time_min",
+      "gain": 587.8568,
+      "is_critical": true
+    },
+    {
+      "feature": "f_crm_system",
+      "gain": 516.7852,
+      "is_critical": false
+    },
+    {
+      "feature": "f_employee_time_tracking",
+      "gain": 150.9984,
+      "is_critical": false
+    },
+    {
+      "feature": "f_lead_qualification_process",
+      "gain": 133.4045,
+      "is_critical": false
+    },
+    {
+      "feature": "f_after_hours_capture_method",
+      "gain": 110.3936,
       "is_critical": true
     },
     {
       "feature": "f_google_reviews_count",
-      "gain": 365.1438,
+      "gain": 95.7073,
       "is_critical": true
     },
     {
-      "feature": "f_lead_response_time_min",
-      "gain": 139.6608,
-      "is_critical": true
+      "feature": "f_decision_rights_defined",
+      "gain": 90.7762,
+      "is_critical": false
     },
     {
-      "feature": "f_total_employees",
-      "gain": 84.5758,
+      "feature": "f_customer_comms_automated",
+      "gain": 84.2157,
       "is_critical": false
     },
     {
       "feature": "f_google_rating",
-      "gain": 41.393,
+      "gain": 76.1779,
       "is_critical": true
     },
     {
-      "feature": "f_after_hours_capture_method",
-      "gain": 36.9343,
+      "feature": "f_overall_roas",
+      "gain": 73.7377,
       "is_critical": true
-    },
-    {
-      "feature": "f_owner_hours_in_business",
-      "gain": 35.0553,
-      "is_critical": false
     },
     {
       "feature": "f_team_autonomous_days",
-      "gain": 29.3945,
-      "is_critical": false
-    },
-    {
-      "feature": "f_owner_admin_hrs_week",
-      "gain": 26.0679,
-      "is_critical": true
-    },
-    {
-      "feature": "f_meta_ads_roas",
-      "gain": 25.2034,
-      "is_critical": false
-    },
-    {
-      "feature": "f_can_identify_least_profitable",
-      "gain": 23.8693,
-      "is_critical": false
-    },
-    {
-      "feature": "f_crm_system",
-      "gain": 22.1542,
-      "is_critical": false
-    },
-    {
-      "feature": "f_version_control_for_docs",
-      "gain": 21.6445,
-      "is_critical": false
-    },
-    {
-      "feature": "f_contact_form_exists",
-      "gain": 20.5931,
-      "is_critical": false
-    },
-    {
-      "feature": "f_click_to_call_enabled",
-      "gain": 13.36,
-      "is_critical": false
-    },
-    {
-      "feature": "f_invoicing_automated",
-      "gain": 11.9223,
+      "gain": 70.3984,
       "is_critical": false
     },
     {
       "feature": "f_employee_satisfaction",
-      "gain": 8.3822,
+      "gain": 65.389,
+      "is_critical": false
+    },
+    {
+      "feature": "f_mobile_responsive",
+      "gain": 61.4941,
+      "is_critical": true
+    },
+    {
+      "feature": "f_chat_widget_present",
+      "gain": 54.6497,
       "is_critical": false
     }
   ],

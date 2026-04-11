@@ -128,15 +128,16 @@ const HEALTH_PROFILES: Record<string, HealthProfile> = {
   },
 }
 
-// Distribution: 2 broken, 2 functional, 2 growing, 2 strong, 1 optimized, 1 disqualified
+// Distribution: 50 per vertical — realistic SMB health bell curve
+// broken(8) + functional(12) + growing(16) + strong(10) + optimized(2) + disqualified(2) = 50
 const DISTRIBUTION: Array<[string, number, number]> = [
   // [profileKey, startNum, endNum]
-  ['broken_sm', 1, 2],
-  ['functional_sm', 3, 4],
-  ['growing_md', 5, 6],
-  ['strong_md', 7, 8],
-  ['optimized_lg', 9, 9],
-  ['disqualified', 10, 10],
+  ['broken_sm',     1,  8],
+  ['functional_sm', 9,  20],
+  ['growing_md',    21, 36],
+  ['strong_md',     37, 46],
+  ['optimized_lg',  47, 48],
+  ['disqualified',  49, 50],
 ]
 
 // ─── VERTICAL CONFIGS ─────────────────────────────────────────────────────
@@ -485,8 +486,8 @@ function buildDataset(vc: VerticalConfig, profileKey: string, num: number) {
     vertical: vc.vertical,
     size_band: profile.size_band,
     health_level: profile.health_level,
-    company_name: vc.companies[idx] ?? `${vc.prefix} Mock Company ${num}`,
-    location: vc.locations[idx] ?? 'USA',
+    company_name: vc.companies[idx % vc.companies.length] ?? `${vc.prefix} Mock Company ${num}`,
+    location: vc.locations[idx % vc.locations.length] ?? 'USA',
     employee_count: employees,
     revenue,
     foundation_score,
@@ -523,7 +524,7 @@ async function main() {
 
   const supabase = createClient(url, key)
   console.log('🚀 AuraFlow Mock Dataset Seeder')
-  console.log('   Generating 150 datasets across 15 verticals (10 each)...\n')
+  console.log('   Generating 750 datasets across 15 verticals (50 each)...\n')
 
   let total = 0
   let errors = 0
