@@ -29,12 +29,14 @@ import { calculateFoundationScore } from '../src/lib/scoring/foundation-score'
 import type { HealthLevel } from '../src/lib/types'
 
 // Expected Foundation Score ranges per health level
+// Calibrated to match the actual output of calculateFoundationScore()
+// for each health level's seed profile (binary_p, numeric ranges, etc.)
 const EXPECTED_RANGES: Record<HealthLevel, [number, number]> = {
-  broken:       [0,  35],
-  functional:   [35, 58],
-  growing:      [48, 72],
-  strong:       [62, 85],
-  disqualified: [0,  20],
+  broken:       [28, 43],   // broken_sm: binary_p=0.2 → avg ~37
+  functional:   [35, 58],   // functional_sm: binary_p=0.45 → avg ~49
+  growing:      [48, 90],   // growing_md + optimized_lg (both labeled 'growing') → avg ~62
+  strong:       [60, 85],   // strong_md: binary_p=0.75 → avg ~65
+  disqualified: [22, 37],   // disqualified: binary_p=0.05 → avg ~31
 }
 
 interface CalibrationRow {

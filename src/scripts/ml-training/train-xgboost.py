@@ -322,11 +322,10 @@ def get_feature_importance(
     """Extract top N features by gain importance."""
     importances = model.get_booster().get_score(importance_type="gain")
 
-    # Map xgboost internal names (f0, f1...) back to feature names
+    # When trained with a DataFrame, XGBoost stores importances by column name
     importance_list = []
-    for i, name in enumerate(feature_names):
-        xgb_key = f"f{i}"
-        gain = importances.get(xgb_key, 0.0)
+    for name in feature_names:
+        gain = importances.get(name, 0.0)
         importance_list.append({
             "feature": name,
             "gain": round(float(gain), 4),

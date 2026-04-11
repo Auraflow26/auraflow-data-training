@@ -6,4 +6,5 @@ node_modules/
 next-env.d.ts
 .vercel
 data/
-ml-data/
+# ml-data tracked except large binary formats
+ml-data/**/*.bin

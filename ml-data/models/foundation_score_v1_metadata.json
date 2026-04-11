@@ -1,0 +1,446 @@
+{
+  "model_version": "v1",
+  "target": "target_foundation_score",
+  "n_features": 163,
+  "feature_names": [
+    "f_website_exists",
+    "f_website_platform",
+    "f_website_age_months",
+    "f_mobile_responsive",
+    "f_page_load_speed",
+    "f_core_web_vitals_pass",
+    "f_has_ssl_certificate",
+    "f_total_indexed_pages",
+    "f_blog_exists",
+    "f_blog_post_frequency",
+    "f_service_pages_count",
+    "f_location_pages_count",
+    "f_contact_form_exists",
+    "f_phone_visible_above_fold",
+    "f_click_to_call_enabled",
+    "f_chat_widget_present",
+    "f_meta_descriptions_coverage",
+    "f_h1_tags_structured",
+    "f_image_alt_tags_coverage",
+    "f_schema_markup_implemented",
+    "f_google_analytics_installed",
+    "f_google_tag_manager_installed",
+    "f_facebook_pixel_installed",
+    "f_conversion_tracking_active",
+    "f_404_error_count",
+    "f_broken_internal_links",
+    "f_domain_authority",
+    "f_organic_keywords_ranking",
+    "f_monthly_lead_volume",
+    "f_lead_sources_breakdown",
+    "f_cost_per_lead",
+    "f_lead_response_time_min",
+    "f_after_hours_capture_method",
+    "f_form_conversion_rate",
+    "f_phone_answer_rate",
+    "f_voicemail_return_time_hrs",
+    "f_lead_qualification_process",
+    "f_lead_scoring_system",
+    "f_crm_system",
+    "f_crm_data_quality",
+    "f_leads_entered_in_crm_pct",
+    "f_follow_up_sequence_exists",
+    "f_follow_up_touchpoints",
+    "f_follow_up_channels",
+    "f_time_to_first_follow_up_hrs",
+    "f_lost_lead_recovery",
+    "f_referral_program_active",
+    "f_referral_rate_pct",
+    "f_online_booking_capability",
+    "f_appointment_no_show_rate",
+    "f_lead_to_appointment_cvr",
+    "f_appointment_to_close_rate",
+    "f_monthly_ad_spend",
+    "f_ad_platforms_used",
+    "f_google_ads_exists",
+    "f_google_ads_conversion_tracking",
+    "f_google_ads_quality_score",
+    "f_google_ads_ctr",
+    "f_google_ads_cpc",
+    "f_google_lsa_active",
+    "f_google_lsa_reviews_count",
+    "f_meta_ads_exists",
+    "f_meta_ads_roas",
+    "f_home_service_platforms",
+    "f_platform_cost_per_lead",
+    "f_ad_creative_last_updated_days",
+    "f_ab_testing_active",
+    "f_negative_keyword_list",
+    "f_geo_targeting_configured",
+    "f_ad_scheduling_active",
+    "f_retargeting_active",
+    "f_overall_roas",
+    "f_ad_spend_revenue_ratio",
+    "f_attribution_model",
+    "f_gbp_claimed",
+    "f_gbp_categories_correct",
+    "f_gbp_photos_count",
+    "f_gbp_posts_last_30d",
+    "f_google_reviews_count",
+    "f_google_rating",
+    "f_review_velocity_monthly",
+    "f_review_response_rate",
+    "f_review_response_time_hrs",
+    "f_yelp_claimed",
+    "f_yelp_review_count",
+    "f_yelp_rating",
+    "f_bbb_profile_exists",
+    "f_industry_review_platforms",
+    "f_review_generation_system",
+    "f_negative_review_protocol",
+    "f_nap_consistency_pct",
+    "f_citation_count",
+    "f_total_software_tools",
+    "f_connected_tools",
+    "f_manual_data_entry_hrs_week",
+    "f_documented_sops",
+    "f_project_management_tool",
+    "f_internal_communication_tool",
+    "f_scheduling_dispatch_system",
+    "f_invoicing_automated",
+    "f_payment_collection_automated",
+    "f_customer_comms_automated",
+    "f_inventory_tracking",
+    "f_employee_time_tracking",
+    "f_onboarding_documented",
+    "f_email_volume_per_day",
+    "f_owner_admin_hrs_week",
+    "f_team_admin_hrs_week",
+    "f_can_handle_2x_volume",
+    "f_biggest_bottleneck",
+    "f_last_operational_failure",
+    "f_data_backup_system",
+    "f_single_point_of_failure_identified",
+    "f_reporting_dashboard_exists",
+    "f_reports_reviewed_frequency",
+    "f_decision_making_speed",
+    "f_phone_system_type",
+    "f_phone_call_recording",
+    "f_industry_platform_used",
+    "f_industry_platform_satisfaction",
+    "f_api_access_available",
+    "f_cloud_storage_organized",
+    "f_version_control_for_docs",
+    "f_compliance_tracking_automated",
+    "f_annual_revenue_range",
+    "f_revenue_growth_trend",
+    "f_profit_margin_range",
+    "f_average_deal_size",
+    "f_cac_known",
+    "f_ltv_known",
+    "f_revenue_per_employee",
+    "f_repeat_customer_rate",
+    "f_revenue_per_customer_year",
+    "f_seasonal_revenue_variance",
+    "f_accounting_software",
+    "f_financial_reports_frequency",
+    "f_cash_flow_visibility",
+    "f_can_identify_most_profitable",
+    "f_can_identify_least_profitable",
+    "f_pricing_strategy",
+    "f_pricing_last_reviewed_months",
+    "f_revenue_forecasting_ability",
+    "f_technology_budget_monthly",
+    "f_marketing_spend_monthly",
+    "f_revenue_from_digital_pct",
+    "f_total_employees",
+    "f_employee_tenure_avg_months",
+    "f_annual_turnover_rate",
+    "f_open_positions",
+    "f_time_to_fill_weeks",
+    "f_training_program_exists",
+    "f_training_hours_per_year",
+    "f_employee_satisfaction",
+    "f_owner_hours_in_business",
+    "f_owner_hours_on_business",
+    "f_delegation_comfort",
+    "f_team_autonomous_days",
+    "f_performance_metrics_tracked",
+    "f_org_chart_exists",
+    "f_decision_rights_defined",
+    "f_team_meetings_frequency",
+    "f_remote_work_capability",
+    "f_culture_documented"
+  ],
+  "best_params": {
+    "learning_rate": 0.1,
+    "max_depth": 4,
+    "min_child_weight": 10,
+    "n_estimators": 300,
+    "reg_alpha": 1.0,
+    "reg_lambda": 10.0
+  },
+  "fixed_params": {
+    "objective": "reg:squarederror",
+    "subsample": 0.8,
+    "colsample_bytree": 0.6,
+    "random_state": 42
+  },
+  "cv_summary": {
+    "best_cv_mae": 1.7211,
+    "best_cv_std": 0.306,
+    "n_combinations": 324,
+    "n_folds": 15,
+    "tuning_seconds": 42.6
+  },
+  "test_metrics": {
+    "mae": 1.2818,
+    "rmse": 2.0508,
+    "r2": 0.9805,
+    "max_absolute_error": 5.6143,
+    "tier_accuracy": 0.9565,
+    "tier_correct": 22,
+    "tier_total": 23,
+    "residual_mean": 0.1294,
+    "residual_std": 2.0468,
+    "out_of_bounds_predictions": 0
+  },
+  "label_encoders": {
+    "f_website_platform": [
+      "custom",
+      "shopify",
+      "squarespace",
+      "webflow",
+      "wix",
+      "wordpress"
+    ],
+    "f_after_hours_capture_method": [
+      "answering_service",
+      "auto_text",
+      "booking_form",
+      "nothing",
+      "voicemail"
+    ],
+    "f_crm_system": [
+      "hubspot",
+      "none",
+      "servicetitan",
+      "spreadsheet",
+      "zoho"
+    ],
+    "f_ad_spend_revenue_ratio": [
+      "high",
+      "low",
+      "optimal",
+      "zero"
+    ],
+    "f_attribution_model": [
+      "first_click",
+      "last_click",
+      "none"
+    ],
+    "f_project_management_tool": [
+      "asana",
+      "email",
+      "monday",
+      "none",
+      "trello"
+    ],
+    "f_internal_communication_tool": [
+      "email",
+      "none",
+      "slack",
+      "text"
+    ],
+    "f_scheduling_dispatch_system": [
+      "calendar_crm",
+      "jobber",
+      "none",
+      "phone_paper"
+    ],
+    "f_employee_time_tracking": [
+      "manual",
+      "none",
+      "spreadsheet"
+    ],
+    "f_can_handle_2x_volume": [
+      "maybe",
+      "no"
+    ],
+    "f_biggest_bottleneck": [
+      "See interview notes"
+    ],
+    "f_last_operational_failure": [
+      "See interview notes"
+    ],
+    "f_reports_reviewed_frequency": [
+      "monthly",
+      "never",
+      "quarterly",
+      "weekly"
+    ],
+    "f_phone_system_type": [
+      "landline",
+      "mobile",
+      "virtual",
+      "voip"
+    ],
+    "f_industry_platform_used": [
+      "buildertrend",
+      "clio",
+      "hubspot",
+      "mindbody",
+      "other",
+      "servicetitan",
+      "shopify",
+      "toast"
+    ],
+    "f_annual_revenue_range": [
+      "1M-5M",
+      "250K-500K",
+      "500K-1M",
+      "5M+",
+      "<250K"
+    ],
+    "f_revenue_growth_trend": [
+      "declining",
+      "flat",
+      "growing"
+    ],
+    "f_profit_margin_range": [
+      "10-20%",
+      "20-30%",
+      "<10%",
+      "negative"
+    ],
+    "f_accounting_software": [
+      "freshbooks",
+      "none",
+      "quickbooks",
+      "spreadsheet",
+      "wave"
+    ],
+    "f_financial_reports_frequency": [
+      "annual",
+      "monthly",
+      "never",
+      "quarterly"
+    ],
+    "f_pricing_strategy": [
+      "competitive",
+      "cost_plus",
+      "gut_feel"
+    ],
+    "f_team_meetings_frequency": [
+      "biweekly",
+      "monthly",
+      "never",
+      "weekly"
+    ]
+  },
+  "top_features": [
+    {
+      "feature": "f_can_handle_2x_volume",
+      "gain": 2915.2339,
+      "is_critical": false
+    },
+    {
+      "feature": "f_profit_margin_range",
+      "gain": 2248.2244,
+      "is_critical": false
+    },
+    {
+      "feature": "f_scheduling_dispatch_system",
+      "gain": 2178.1619,
+      "is_critical": false
+    },
+    {
+      "feature": "f_monthly_lead_volume",
+      "gain": 544.5541,
+      "is_critical": true
+    },
+    {
+      "feature": "f_google_reviews_count",
+      "gain": 365.1438,
+      "is_critical": true
+    },
+    {
+      "feature": "f_lead_response_time_min",
+      "gain": 139.6608,
+      "is_critical": true
+    },
+    {
+      "feature": "f_total_employees",
+      "gain": 84.5758,
+      "is_critical": false
+    },
+    {
+      "feature": "f_google_rating",
+      "gain": 41.393,
+      "is_critical": true
+    },
+    {
+      "feature": "f_after_hours_capture_method",
+      "gain": 36.9343,
+      "is_critical": true
+    },
+    {
+      "feature": "f_owner_hours_in_business",
+      "gain": 35.0553,
+      "is_critical": false
+    },
+    {
+      "feature": "f_team_autonomous_days",
+      "gain": 29.3945,
+      "is_critical": false
+    },
+    {
+      "feature": "f_owner_admin_hrs_week",
+      "gain": 26.0679,
+      "is_critical": true
+    },
+    {
+      "feature": "f_meta_ads_roas",
+      "gain": 25.2034,
+      "is_critical": false
+    },
+    {
+      "feature": "f_can_identify_least_profitable",
+      "gain": 23.8693,
+      "is_critical": false
+    },
+    {
+      "feature": "f_crm_system",
+      "gain": 22.1542,
+      "is_critical": false
+    },
+    {
+      "feature": "f_version_control_for_docs",
+      "gain": 21.6445,
+      "is_critical": false
+    },
+    {
+      "feature": "f_contact_form_exists",
+      "gain": 20.5931,
+      "is_critical": false
+    },
+    {
+      "feature": "f_click_to_call_enabled",
+      "gain": 13.36,
+      "is_critical": false
+    },
+    {
+      "feature": "f_invoicing_automated",
+      "gain": 11.9223,
+      "is_critical": false
+    },
+    {
+      "feature": "f_employee_satisfaction",
+      "gain": 8.3822,
+      "is_critical": false
+    }
+  ],
+  "meta_columns_excluded": [
+    "dataset_id",
+    "company_name",
+    "vertical",
+    "size_band",
+    "health_level"
+  ],
+  "seed": 42
+}
