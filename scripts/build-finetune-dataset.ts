@@ -385,7 +385,7 @@ async function main() {
   console.log(`   Avg Foundation Score: ${avgScore}/100`)
   console.log()
   console.log('Next step: fine-tune Hermes with this dataset')
-  console.log('  ollama create auraflow-hermes -f hermes-training/Modelfile')
+  console.log('  python3 src/scripts/ml-training/lora-finetune.py')
   console.log()
 }
 
